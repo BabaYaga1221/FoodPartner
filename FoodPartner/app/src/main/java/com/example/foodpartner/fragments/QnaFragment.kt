@@ -1,0 +1,62 @@
+package com.example.foodpartner.fragments
+
+import android.content.Context
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.foodpartner.R
+import com.example.foodpartner.adapter.HomePageAdapter
+import com.example.foodpartner.adapter.QnAAdapter
+import com.example.foodpartner.model.QnA
+
+class QnaFragment : Fragment() {
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var recyclerAdapter: QnAAdapter
+    var itemList = arrayListOf<QnA>(
+        QnA("Q.1 What is Food Partner?",
+            "Food Partner is a mobile app that allows users to conveniently order food from various restaurants and cafes in their area, as well as provide reviews and ratings for the food and services they experience."),
+        QnA("Q.2 How can I download Food Partner?",
+            "You can download the Food Partner app from the Apple App Store for iOS devices or the Google Play Store for Android devices. Simply search for Food Partner and follow the installation instructions."),
+        QnA("Q.3 How do I create an account on Food Partner?",
+            "To create an account on Food Partner, open the app and click on the Sign Up button. You will be prompted to enter your personal details, such as your name, email address, and phone number. Once you provide the required information, you can set a password and complete the registration process."),
+        QnA("Q.4 Can I order food from any restaurant using Food Partner?",
+            "Food Partner partners with a wide range of restaurants and cafes. However, the availability of restaurants may vary depending on your location. The app will show you the list of available restaurants in your area once you enter your delivery address."),
+        QnA("Q.5 How can I place an order through Food Partner?",
+            "Once you have created an account and logged in, you can browse through the list of restaurants or use the search function to find a specific eatery. Select the desired items from the menu, customize your order if needed, and proceed to the checkout. Provide your delivery address and payment details to complete the order."),
+        QnA("Q.6 What payment methods are accepted on Food Partner?",
+            "Food Partner accepts various payment methods, including credit cards, debit cards, and digital wallets such as Apple Pay and Google Pay. The available payment options may vary depending on your location."),
+        QnA("Q.7 How long does it take to deliver the food?",
+            "The delivery time depends on several factors, including the restaurant's preparation time, distance from the restaurant to your location, and current order volume. Food Partner provides an estimated delivery time for each order, which you can view before placing your order."),
+        QnA("Q.8 Can I track the status of my order?",
+            "Yes, Food Partner offers a real-time order tracking feature. Once your order is confirmed and the restaurant begins preparing your food, you will be able to track its progress within the app. You can see when the food is being cooked, packed, and out for delivery."),
+        QnA("Q.9 Can I cancel or modify my order?",
+            "Food Partner allows users to cancel or modify their orders, but it depends on the specific restaurant's policies and the stage of the order. You can find the option to cancel or modify your order within the app. However, if the order is already being prepared or out for delivery, these changes may not be possible."),
+        QnA("Q.10 How can I leave a review or rating for a restaurant on Food Partner?",
+            "After receiving your food, you will have the opportunity to rate and review the restaurant on Food Partner. Open the app, go to your order history, and select the order you want to review. You can then provide a rating and leave a detailed review about your experience with the restaurant."),
+    )
+
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_qna, container, false)
+
+        recyclerView = view.findViewById(R.id.recycleViewQnA)
+        layoutManager  = LinearLayoutManager(activity)
+
+        recyclerAdapter = QnAAdapter(activity as Context, itemList)
+        recyclerView.adapter = recyclerAdapter
+        recyclerView.layoutManager = layoutManager
+
+        return view
+    }
+}

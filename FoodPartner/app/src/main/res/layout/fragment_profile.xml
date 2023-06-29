@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".fragments.ProfileFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/round_image_border"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farhan Khan"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_below="@id/profileImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:background="@drawable/round_corner"/>
+
+            <TextView
+                android:id="@+id/profileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(+91) 7275204430"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_below="@id/profileName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:background="@drawable/round_corner"/>
+            <TextView
+                android:id="@+id/profileAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 221B Baker Street in London, England"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_below="@id/profileEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:background="@drawable/round_corner"/>
+            <TextView
+                android:id="@+id/profileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="foodPartner@gmail.com"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_below="@id/profileNumber"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:background="@drawable/round_corner"/>
+
+        </RelativeLayout>
+
+</LinearLayout>
