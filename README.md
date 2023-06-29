@@ -14,6 +14,13 @@ Food Partner is a demo review Android app designed to enhance your food discover
 
 - **Bookmarking**: Save your favorite restaurants for quick access and future reference, allowing you to keep track of places you want to visit again.
 
+## Screenshots
+
+<img src="ScreenShots/SplashScreen.jpeg" alt="Splash Screen" width=100px>
+<img src="ScreenShots/Dashboard.jpeg" alt="Dashboard" width=100px>
+<img src="ScreenShots/Drawer.jpeg" alt="Drawer" width=100px>
+<img src="ScreenShots/FAQs.jpeg" alt="FAQs" width=100px>
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/food-partner.git`
